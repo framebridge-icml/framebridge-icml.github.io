@@ -42,17 +42,12 @@
               <font color="000093">Abstract</font>
             </h2>
             <p style="text-align: justify;">
-              <font color="061E61"> Image-to-video (I2V) generation is gaining increasing attention with its wide application in video synthesis.
-                Recently, diffusion-based I2V models have achieved remarkable progress given their novel design on network architecture, cascaded framework, and motion representation.
-                However, restricted by their noise-to-data generation process, diffusion-based methods inevitably suffer the difficulty to generate video samples 
-                with both appearance consistency and temporal coherence from an uninformative Gaussian noise, which may limit their synthesis quality.
-                In this work, we present FrameBridge, taking the given static image as the prior of video target and establishing a tractable bridge model between them.
-                By formulating I2V synthesis as a <b>frames-to-frames</b> generation task and modelling it with a <b>data-to-data</b> process,
-                we fully exploit the information in input image and facilitate the generative model to learn the image animation process.
-                In two popular settings of training I2V models, namely fine-tuning a pre-trained text-to-video (T2V) model or training from scratch,
-                we further propose two techniques, SNR-Aligned Fine-tuning (SAF) and neural prior, which improve the fine-tuning efficiency of diffusion-based T2V models to FrameBridge and the synthesis quality of bridge-based I2V models respectively.
-                Experiments conducted on WebVid-2M and UCF-101 demonstrate that: (1) our FrameBridge achieves superior I2V quality in comparison with the diffusion counterpart (zero-shot FVD 83 vs. 176 on MSR-VTT and non-zero-shot FVD 122 vs. 171 on UCF-101);
-                (2) our proposed SAF and neural prior effectively enhance the ability of bridge-based I2V models in the scenarios of fine-tuning and training from scratch.               
+              <font color="061E61"> 
+                Diffusion models have achieved remarkable progress on image-to-video (I2V) generation, while their noise-to-data generation process is inherently mismatched with this task, which may lead to suboptimal synthesis quality. In this work, we present FrameBridge. 
+                By modeling the <b>frame-to-frames</b> generation process with a bridge model based <b>data-to-data</b> generative process, we are able to fully exploit the information contained in the given image and improve the consistency between the generation process and I2V task.
+                Moreover, we propose two novel techniques toward the two popular settings of training I2V models, respectively.
+                Firstly, we propose <b>SNR-Aligned Fine-tuning (SAF)</b>, making the first attempt to fine-tune a diffusion model to a bridge model and, therefore, allow us to utilize the pre-trained diffusion-based text-to-video (T2V) models. Secondly, we propose <b>neural prior</b>, further improving the synthesis quality of FrameBridge when training from scratch.
+                Experiments conducted on WebVid-2M and UCF-101 demonstrate the superior quality of FrameBridge in comparison with the diffusion counterpart (zero-shot FVD 95 vs. 192 on MSR-VTT and non-zero-shot FVD 122 vs. 171 on UCF-101), and the advantages of our proposed SAF and neural prior for bridge-based I2V models.
               </font>
             </p>
 
