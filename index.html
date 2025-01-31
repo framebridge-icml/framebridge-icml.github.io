@@ -56,13 +56,13 @@
               <font color="000093">Innovations</font>
             </h2>
             <li>
-              <font color="061E61"> <b>FrameBridge</b> formulates I2V synthesis as a <i>frames-to-frames</i> generation task and models it with a <i>data-to-data</i> generative framework.</font>
+              <font color="061E61"> <b>FrameBridge</b> models the I2V (frame-to-frames) generation task with a data-to-data generation process of bridge models, rather than using the preivous noise-to-data one of diffusion models, improving the consistency between generative models and generation task.</font>
             </li>
             <li>
-              <font color="061E61"> <b>SNR-aligned fine-tuning (SAF)</b> aligns the marginal distribution of bridge process and diffusion process, facilitating the leverage of the pre-trained text-to-video (T2V) diffusion models. </font>
+              <font color="061E61"> <b>SNR-aligned fine-tuning (SAF)</b> aligns the noisy intermediate latent of bridge process and diffusion process while remaining the difference between these two generative models, facilitating the leverage of the pre-trained text-to-video (T2V) diffusion models for FrameBridge. </font>
             </li>
             <li>
-              <font color="061E61"> <b>Neural prior</b> finds a stronger prior than the static image for video target, further improving the performance of FrameBridge.</font>
+              <font color="061E61"> <b>Neural prior</b> finds a stronger prior than the static image for video target, further improving the performance of FrameBridge when training from scratch.</font>
             </li>
 
             <figure>
@@ -70,7 +70,7 @@
               <figcaption>
                 <p style="text-align: justify;">
                   <font color="061E61"><b>Figure 1:</b> Overview of FrameBridge and diffusion-based I2V models. 
-                    The sampling process of FrameBridge (upper) starts from the informative given image, while diffusion models (lower) synthesize videos from uninformative noisy representation.
+                    The sampling process of FrameBridge (upper) starts from the informative given image, while diffusion models (lower) synthesize videos from uninformative Gaussian noise.
                 </p>
               </figcaption>
             </figure>
